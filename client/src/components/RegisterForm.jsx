@@ -1,27 +1,33 @@
-import { useState } from "react"
-import { useHistory } from 'react-router-dom'
-export default function RegisterForm(props) {
-  const history = useHistory()
-  const [user, setUser] = useState({
-    email: "",
-    password: ""
-  })
+import { Form, Button } from "react-bootstrap";
+import './register.css';
+import { AiOutlineMail, AiFillUnlock } from "react-icons/ai";
 
-  const handleSubmit = event => {
-    event.preventDefault()
-    props.handleRegister(user)
-    history.push('/login')
-  }
-
-  const handleChange = event => {
-    setUser({ ...user, [event.target.name]: event.target.value })
-  }
+const RegisterForm = () => {
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="email" value={user.email} onChange={handleChange} />
-      <input type="password" name="password" value={user.password} onChange={handleChange} />
-      <input type="submit" value="register" />
-    </form>
-  )
+    <div className="sign-up">
+       <h1>Sign up</h1>
+      
+      <Form data-ms-form="signup" className="form-signup">
+        <Form.Group controlId="formBasicEmail">
+          <AiOutlineMail />
+          <Form.Label> &nbsp; Email address</Form.Label>
+          <Form.Control data-ms-member="email" type="email" placeholder="Enter email" />
+        </Form.Group>
+      
+        <Form.Group controlId="formBasicPassword">
+          <AiFillUnlock />
+          <Form.Label> &nbsp; Password</Form.Label>
+          <Form.Control data-ms-member="password" type="password" placeholder="Password" />
+        </Form.Group>
+
+        <Button className="form-button" variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+      <a className="to-login" href="/login">Already a member? (log in)</a>
+    </div>
+  );
 }
+
+export default RegisterForm;

@@ -1,0 +1,35 @@
+.sign-up {
+  margin: auto;
+  width: 30%;
+  padding: 1rem;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.4);
+  transform: translate(0% ,  20%);
+  background-color: rgb(173, 171, 166);
+}
+
+.sign-up h1 {
+  text-align: center;
+}
+
+.form-signup {
+  width: 80%;
+  margin: auto;
+}
+
+.form-button {
+  margin-top: 1rem;
+}
+
+.to-login {
+  padding: 1rem;
+  display: inline-block;
+}
+
+@media screen and (max-width: 720px) {
+  .form-signup {
+    width: 100%;
+  }
+  .sign-up {
+    width: 85%
+  }
+}

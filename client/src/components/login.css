@@ -1,0 +1,36 @@
+.login {
+  margin: auto;
+  width: 30%;
+  padding: 1rem;
+  transform: translate(0% ,  20%);
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.4);
+  background-color: rgb(173, 171, 166);
+}
+
+.login h1 {
+  text-align: center;
+}
+
+.form-login {
+  width: 80%;
+  margin: auto;
+}
+
+.form-button {
+  margin-top: 1rem;
+}
+
+
+.to-signup {
+  padding: 1rem;
+  display: inline-block;
+}
+
+@media screen and (max-width: 720px) {
+  .form-login {
+    width: 100%;
+  }
+  .login {
+    width: 85%
+  }
+}
