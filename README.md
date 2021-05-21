@@ -1,7 +1,7 @@
 ## Installation
 
-Run ```npm i``` command in main folder, client and backend.
+Run ```npm i``` command in main folder and client folder.
 
 ## Setup
 
-Have 2 terminal windows. Run ```npm start``` in both backend and client folders together.
+Run ```npm start``` in client folder.
